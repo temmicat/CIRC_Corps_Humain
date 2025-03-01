@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Vaccination
   description: Faites participez vos enfants aux programmes de vaccination
-  icon: {fileID: -7053939661997144990, guid: 4dffe6eab57ca4e4ba2f967307bd1c29, type: 3}
+  icon: {fileID: 21300000, guid: 8e0716b76d396934b88bd29148e46be7, type: 3}
   thisCard: 4

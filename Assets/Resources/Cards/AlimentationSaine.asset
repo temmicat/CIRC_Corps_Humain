@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Alimentation saine
   description: Adoptez une alimentation saine
-  icon: {fileID: -7053939661997144990, guid: 4dffe6eab57ca4e4ba2f967307bd1c29, type: 3}
+  icon: {fileID: 21300000, guid: cde681acc01dd904591b15cc20b51839, type: 3}
   thisCard: 3

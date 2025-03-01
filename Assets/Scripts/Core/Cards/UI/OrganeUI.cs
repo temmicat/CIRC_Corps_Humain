@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,9 @@ namespace CorpsHumain.Core
         public List<OrganeData> organesList;
         public OrganeData organeDataScriptable { get; private set; }
         public GameData gameDataScriptable;
+
+        public TextMeshProUGUI OrganName;
+
 
         [SerializeField]
         private Image icon;
@@ -41,6 +45,7 @@ namespace CorpsHumain.Core
         public void ApplyData()
         {
             icon.sprite = organeDataScriptable.Icon;
+            OrganName.text = organeDataScriptable.name;
         }
     }
 }

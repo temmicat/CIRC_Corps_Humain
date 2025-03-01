@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace CorpsHumain.Core
@@ -12,6 +14,12 @@ namespace CorpsHumain.Core
         public GameObject validateResultsButton;
         public GameObject backButton;
 
+        public GameObject UpperOrgans;
+        public GameObject MiddleOrgans;
+        public GameObject LowerOrgans;
+
+        public TextMeshProUGUI organsClearedText;
+
         [Header("Panels")]
         public GameObject settingsPanel;
         public GameObject selectionPanel;
@@ -20,6 +28,7 @@ namespace CorpsHumain.Core
         [Header("Scripts")]
         public WinSystem winSystem;
         public SetLevelsCleared setLevelsCleared;
+        public ShowPlayerResults showPlayerResults;
 
 
         // Need to access the Scriptable object GameData
@@ -28,17 +37,25 @@ namespace CorpsHumain.Core
         private void Start()
         {
             if (SceneManager.GetActiveScene().name == "MainMenu")
+            {
                 setLevelsCleared.CheckValues();
+                organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organes";
+            }
             if (gameDataScriptable.levelsCleared.Count == 13)
             {
                 ResultPanel.SetActive(true);
+                showPlayerResults.EnterResults();
                 selectionPanel.SetActive(false);
             }
+            for (int i = 0; i < 13; i++) { Debug.Log("player total answers index " + i + " : " + gameDataScriptable.playerTotalAnswers[gameDataScriptable.resultsShowOrder[i]].Count); }
         }
 
         #region SelectionPanel
         public void ClearButton()
         {
+            clearConfirmButton.SetActive(false);
+            quitConfirmButton.SetActive(false);
+
             // set active ClearConfirmButton
             clearConfirmButton.SetActive(true);
         }
@@ -52,10 +69,39 @@ namespace CorpsHumain.Core
             setLevelsCleared.SetButtonsActive();
 
             clearConfirmButton.SetActive(false);
+
+            organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organes";
+        }
+
+        public void DeselectButton()
+        {
+            UpperOrgans.SetActive(false);
+            MiddleOrgans.SetActive(false);
+            LowerOrgans.SetActive(false);
+            clearConfirmButton.SetActive(false);
+            quitConfirmButton.SetActive(false);
+            levelConfirmButton.SetActive(false);
+        }
+
+        public void UpperButton()
+        {
+            UpperOrgans.SetActive(true);
+        }
+
+        public void MiddleButton()
+        {
+            MiddleOrgans.SetActive(true);
+        }
+
+        public void LowerButton()
+        {
+            LowerOrgans.SetActive(true);
         }
 
         public void SettingsButton()
         {
+            DeselectButton();
+
             // Set Active SettingsPanel
             settingsPanel.SetActive(true);
             // Set Unactive SelectionPanel
@@ -64,12 +110,16 @@ namespace CorpsHumain.Core
 
         public void QuitButton()
         {
+            clearConfirmButton.SetActive(false);
+            quitConfirmButton.SetActive(false);
+
             // SetActive QuitConfirmButton
             quitConfirmButton.SetActive(true);
         }
 
         public void QuitConfirmButton()
         {
+
             // Quit game
             quitConfirmButton.SetActive(false);
             Application.Quit();
@@ -86,14 +136,20 @@ namespace CorpsHumain.Core
         private void ChooseOrgan(GameData.levels level)
         {
             // Select one organ from GameData.levelsList
-            gameDataScriptable.levelActive = level;
-            levelConfirmButton.SetActive(true);
-            Debug.Log(level);
-            Debug.Log(gameDataScriptable.levelActive);
+            if (!gameDataScriptable.levelsCleared.Contains(level))
+            {
+                gameDataScriptable.levelActive = level;
+                levelConfirmButton.SetActive(true);
+                Debug.Log(level);
+                Debug.Log(gameDataScriptable.levelActive);
+            }
+            else { }
         }
 
         public void LevelConfirmButton()
         {
+            DeselectButton();
+
             // change scene
             levelConfirmButton.SetActive(false);
             SceneManager.LoadScene(1);
@@ -121,6 +177,22 @@ namespace CorpsHumain.Core
         #endregion SettingsPanel
 
         #region GamePanel
+
+        public void Update()
+        {
+            if(SceneManager.GetActiveScene().name == "SceneOrgan")
+            {
+                if(gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber)
+                {
+                    validateResultsButton.SetActive(true);
+                }
+                else
+                {
+                    validateResultsButton.SetActive(false);
+                }
+            }    
+        }
+
         public void ValidateResultsButton()
         {
             if(gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber)
@@ -143,6 +215,7 @@ namespace CorpsHumain.Core
         {
             ResultPanel.SetActive(false);
             selectionPanel.SetActive(true);
+            ClearConfirmButton();
         }
 
         public void SaveAsPDF()

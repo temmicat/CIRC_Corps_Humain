@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Soleil
   description: Evitez une exposition excessive au soleil
-  icon: {fileID: 21300000, guid: 7ae9d2c635ae1274091b08b9b24d09cb, type: 3}
+  icon: {fileID: 21300000, guid: 63913729a98173b45830e8ab9ad4db22, type: 3}
   thisCard: 1

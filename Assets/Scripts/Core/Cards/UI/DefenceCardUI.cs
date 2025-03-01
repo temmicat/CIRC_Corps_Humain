@@ -69,6 +69,7 @@ namespace CorpsHumain.Core
 
                         //ADD card to GameData
                         gameDataScriptable.playerAnswers.Add(thisDefenceCard.Data.thisCard);
+                        gameDataScriptable.answers.Add(thisDefenceCard);
 
                         Debug.Log("Yay");
                         // gameDataScriptable.gameAnswers[gameDataScriptable.levelActive][gameDataScriptable.playerAnswers.Count] = this.gameObject;
@@ -105,6 +106,7 @@ namespace CorpsHumain.Core
 
                         //REMOVE card from WinSystem
                         gameDataScriptable.playerAnswers.Remove(thisDefenceCard.Data.thisCard);
+                        gameDataScriptable.answers.Remove(thisDefenceCard);
 
                         return;
                     }

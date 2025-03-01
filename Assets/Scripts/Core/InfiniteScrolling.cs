@@ -13,6 +13,7 @@ public class InfiniteScrolling : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        /*
         int itemsToAdd = Mathf.CeilToInt(viewportTransform.rect.width / (itemList[0].rect.width + horizontalLayoutGroup.spacing));
 
         for (int i = 0; i < itemsToAdd; i++)
@@ -31,6 +32,7 @@ public class InfiniteScrolling : MonoBehaviour
             RectTransform rectTransform = Instantiate(itemList[num], contentPanelTransform);
             rectTransform.SetAsFirstSibling();
         }
+        */
     }
 
     // Update is called once per frame

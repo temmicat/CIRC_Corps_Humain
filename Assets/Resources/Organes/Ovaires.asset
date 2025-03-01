@@ -15,4 +15,4 @@ MonoBehaviour:
   thisOrgane: 12
   thisOrganAnswers: 0a000000050000000500000005000000
   numberOfAnswers: 4
-  icon: {fileID: 21300000, guid: a685aa7ba5f7a074f8a84237bbab1032, type: 3}
+  icon: {fileID: 21300000, guid: a6c3c7de53c5af041a786dccd8122bc5, type: 3}

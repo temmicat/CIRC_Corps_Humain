@@ -25,22 +25,27 @@ namespace CorpsHumain.Core
 
         public int answersNumber;
 
+        public List<DefenceCard> answers = new List<DefenceCard>();
+
+
         // Game answers
-        public Dictionary<levels, List<GameObject>> gameAnswers = new Dictionary<levels, List<GameObject>>()
+        public Dictionary<levels, List<DefenceCard>> playerTotalAnswers = new Dictionary<levels, List<DefenceCard>>()
         {
-            {levels.Rein, new List<GameObject>()},
-            {levels.Ovaires, new List<GameObject>() },
-            {levels.Sein, new List<GameObject>() },
-            {levels.Pancreas, new List<GameObject>() },
-            {levels.Peau, new List<GameObject>() },
-            {levels.ColDeLUterus, new List<GameObject>() },
-            {levels.ColonRectum, new List<GameObject>() },
-            {levels.Endometre, new List<GameObject>() },
-            {levels.Estomac, new List<GameObject>() },
-            {levels.Foie, new List<GameObject>() },
-            {levels.Oesophage, new List<GameObject>() },
-            {levels.Poumon, new List<GameObject>() },
-            {levels.Vessie, new List<GameObject>() },
+            {levels.Rein, new List<DefenceCard>()},
+            {levels.Ovaires, new List<DefenceCard>() },
+            {levels.Sein, new List<DefenceCard>() },
+            {levels.Pancreas, new List<DefenceCard>() },
+            {levels.Peau, new List<DefenceCard>() },
+            {levels.ColDeLUterus, new List<DefenceCard>() },
+            {levels.ColonRectum, new List<DefenceCard>() },
+            {levels.Endometre, new List<DefenceCard>() },
+            {levels.Estomac, new List<DefenceCard>() },
+            {levels.Foie, new List<DefenceCard>() },
+            {levels.Oesophage, new List<DefenceCard>() },
+            {levels.Poumon, new List<DefenceCard>() },
+            {levels.Vessie, new List<DefenceCard>() },
         };
+
+        public List<levels> resultsShowOrder;
     }
 }
