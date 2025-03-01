@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 namespace CorpsHumain.Core
 {
@@ -18,7 +19,14 @@ namespace CorpsHumain.Core
         public GameObject MiddleOrgans;
         public GameObject LowerOrgans;
 
+        public AudioSource AudioSource_Click;
+        public AudioSource AudioSource_ClickImportant;
+
+        public AudioMixer audioMixer;
+        public Slider audioSlider;
+
         public TextMeshProUGUI organsClearedText;
+
 
         [Header("Panels")]
         public GameObject settingsPanel;
@@ -29,6 +37,7 @@ namespace CorpsHumain.Core
         public WinSystem winSystem;
         public SetLevelsCleared setLevelsCleared;
         public ShowPlayerResults showPlayerResults;
+
 
 
         // Need to access the Scriptable object GameData
@@ -53,6 +62,8 @@ namespace CorpsHumain.Core
         #region SelectionPanel
         public void ClearButton()
         {
+            AudioSource_Click.Play();
+
             clearConfirmButton.SetActive(false);
             quitConfirmButton.SetActive(false);
 
@@ -62,6 +73,8 @@ namespace CorpsHumain.Core
 
         public void ClearConfirmButton()
         {
+            AudioSource_ClickImportant.Play();
+
             // Reset GameData
             gameDataScriptable.levelsCleared.Clear();
             gameDataScriptable.playerAnswers.Clear();
@@ -85,21 +98,29 @@ namespace CorpsHumain.Core
 
         public void UpperButton()
         {
+            AudioSource_Click.Play();
+
             UpperOrgans.SetActive(true);
         }
 
         public void MiddleButton()
         {
+            AudioSource_Click.Play();
+
             MiddleOrgans.SetActive(true);
         }
 
         public void LowerButton()
         {
+            AudioSource_Click.Play();
+
             LowerOrgans.SetActive(true);
         }
 
         public void SettingsButton()
         {
+            AudioSource_ClickImportant.Play();
+
             DeselectButton();
 
             // Set Active SettingsPanel
@@ -110,6 +131,8 @@ namespace CorpsHumain.Core
 
         public void QuitButton()
         {
+            AudioSource_ClickImportant.Play();
+
             clearConfirmButton.SetActive(false);
             quitConfirmButton.SetActive(false);
 
@@ -127,6 +150,8 @@ namespace CorpsHumain.Core
 
         public void ChooseLevel(string levelStr)
         {
+            AudioSource_Click.Play();
+
             if (System.Enum.TryParse(levelStr, out GameData.levels level))
             {
                 ChooseOrgan(level);
@@ -148,6 +173,8 @@ namespace CorpsHumain.Core
 
         public void LevelConfirmButton()
         {
+            AudioSource_ClickImportant.Play();
+
             DeselectButton();
 
             // change scene
@@ -159,16 +186,44 @@ namespace CorpsHumain.Core
         #region SettingsPanel
         public void EnglishButton()
         {
+            AudioSource_Click.Play();
+
             // Set every texts in english ? (maybe make other scenes in english)
         }
 
         public void FrenchButton()
         {
+            AudioSource_Click.Play();
+
             // Set every texts in french
+        }
+
+        public void AudioSlider()
+        {
+            float volume = audioSlider.value;
+            audioMixer.SetFloat("SFX", Mathf.Log10(volume)*20);
+        }
+
+        public void AudioButton()
+        {
+            AudioSource_Click.Play();
+
+            if (audioSlider.value == 0.0001f)
+            {
+                audioSlider.value = 1;
+                audioMixer.SetFloat("SFX", Mathf.Log10(1) * 20);
+            }
+            else
+            {
+                audioSlider.value = 0.0001f;
+                audioMixer.SetFloat("SFX", Mathf.Log10(0.0001f) * 20);
+            }
         }
 
         public void SelctionButton()
         {
+            AudioSource_ClickImportant.Play();
+
             // Set Active selectionPanel
             selectionPanel.SetActive(true);
             // Set UnActive settingsPanel
@@ -195,7 +250,9 @@ namespace CorpsHumain.Core
 
         public void ValidateResultsButton()
         {
-            if(gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber)
+            AudioSource_Click.Play();
+
+            if (gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber)
             {
                 gameDataScriptable.levelsCleared.Add(gameDataScriptable.levelActive);
                 validateResultsButton.SetActive(false);
@@ -206,6 +263,8 @@ namespace CorpsHumain.Core
 
         public void BackButton()
         {
+            AudioSource_ClickImportant.Play();
+
             SceneManager.LoadScene(0);
         }
         #endregion GamePanel
@@ -213,6 +272,8 @@ namespace CorpsHumain.Core
         #region ResultPanel
         public void CloseResultPanel()
         {
+            AudioSource_ClickImportant.Play();
+
             ResultPanel.SetActive(false);
             selectionPanel.SetActive(true);
             ClearConfirmButton();
@@ -220,6 +281,8 @@ namespace CorpsHumain.Core
 
         public void SaveAsPDF()
         {
+            AudioSource_Click.Play();
+
             return;
         }
 
