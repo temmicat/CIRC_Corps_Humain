@@ -238,7 +238,7 @@ namespace CorpsHumain.Core
         {
             if(SceneManager.GetActiveScene().name == "SceneOrgan")
             {
-                if(gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber)
+                if(gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber && !backButton.activeSelf)
                 {
                     validateResultsButton.SetActive(true);
                 }
@@ -265,6 +265,7 @@ namespace CorpsHumain.Core
         public void BackButton()
         {
             AudioSource_ClickImportant.Play();
+            gameDataScriptable.playerAnswers.Clear();
 
             SceneManager.LoadScene(0);
         }

@@ -73,68 +73,68 @@ namespace CorpsHumain.Core
             Debug.Log("checking");
             if(gameDataScriptable.levelsCleared.Contains(GameData.levels.ColDeLUterus))
             {
-                colDeLUterusButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                colDeLUterusButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                colDeLUterusButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                colDeLUterusButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.ColonRectum))
             {
-                colonRectumButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                colonRectumButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                colonRectumButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                colonRectumButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Endometre))
             {
-                endometreButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                endometreButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                endometreButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                endometreButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Estomac))
             {
-                estomacButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                estomacButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                estomacButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                estomacButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Foie))
             {
-                foieButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                foieButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                foieButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                foieButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Oesophage))
             {
-                oesophageButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                oesophageButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                oesophageButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                oesophageButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Ovaires))
             {
-                ovairesButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                ovairesButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                ovairesButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                ovairesButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Pancreas))
             {
-                pancreasButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                pancreasButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                pancreasButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                pancreasButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Peau))
             {
-                peauButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                peauButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                peauButton.GetComponent<Image>().color = new Color32(235, 235, 235, 190);
+                peauButton_2.GetComponent<Image>().color = new Color32(235, 235, 235, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Poumon))
             {
-                poumonsButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                poumonsButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                poumonsButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                poumonsButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Rein))
             {
-                reinButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                reinButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                reinButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                reinButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Sein))
             {
-                seinButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                seinButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                seinButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                seinButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
             if (gameDataScriptable.levelsCleared.Contains(GameData.levels.Vessie))
             {
-                vessieButton.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
-                vessieButton_2.GetComponent<Image>().color = new Color32(81, 255, 153, 190);
+                vessieButton.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
+                vessieButton_2.GetComponent<Image>().color = new Color32(175, 175, 175, 190);
             }
         }
     }

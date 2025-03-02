@@ -4,7 +4,7 @@ namespace CorpsHumain.Core
 {
     public class DefenceCard
     {
-        public DefenceCardData Data { get; }
+        public DefenceCardData Data { get; set; }
 
         public bool isPlayerCard;
         public DefenceCard(DefenceCardData data)

@@ -32,7 +32,6 @@ namespace CorpsHumain.Core
                 ResultUI(answerNumber, thisCardIsGoodAnswer);
                 thisCardIsGoodAnswer = false ;
             }
-            gameDataScriptable.playerAnswers.Clear();
             Debug.Log("Game datas answer number : " + gameDataScriptable.answers.Count);
             List<DefenceCard> theList = new List<DefenceCard>();
             for (int i = 0; i < gameDataScriptable.answers.Count; i++)

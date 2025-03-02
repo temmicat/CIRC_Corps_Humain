@@ -25,8 +25,20 @@ namespace CorpsHumain.Core
         public GameData gameDataScriptable;
 
 
+        [SerializeField]
+        public DefenceCardData thisDefenceCardData;
 
         public DefenceCard thisDefenceCard;
+
+        public void Start()
+        {
+            if (thisDefenceCardData != null) 
+            {
+                thisDefenceCard = new DefenceCard(thisDefenceCardData);
+                thisDefenceCard.Data = thisDefenceCardData;
+                SetData(thisDefenceCard);     
+            }
+        }
 
         public void SetData(DefenceCard card)
         {

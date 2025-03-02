@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 89.9638}
+  m_AnchoredPosition: {x: -0.20080185, y: 4.8184}
+  m_SizeDelta: {x: -7.6291, y: 101.8413}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &809543077089948327
 CanvasRenderer:
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 16
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -170,8 +170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2.3926}
-  m_SizeDelta: {x: 0, y: 39.2702}
+  m_AnchoredPosition: {x: 0, y: -4.0669}
+  m_SizeDelta: {x: 0, y: 37.5959}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2426698274594144206
 CanvasRenderer:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: New Text zzzz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -424,6 +424,7 @@ MonoBehaviour:
   description: {fileID: 8233070687989271076}
   icon: {fileID: 2790074675998507401}
   gameDataScriptable: {fileID: 11400000, guid: 90fa4910671ddd64999cf7c13e23ddb2, type: 2}
+  thisDefenceCardData: {fileID: 0}
 --- !u!1 &7171618492974687320
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 13.7}
+  m_AnchoredPosition: {x: 0, y: 24.3}
   m_SizeDelta: {x: -40, y: -112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2523761085220213065
@@ -489,7 +490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62f38850a65bd37478f6d3db223d2bcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cdd8cb9f8e87c2419f15a2b6f1a3134, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
