@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using System;
 
 namespace CorpsHumain.Core
 {
@@ -283,7 +284,7 @@ namespace CorpsHumain.Core
         {
             AudioSource_Click.Play();
 
-            return;
+            ScreenCapture.CaptureScreenshot("Game_Results_Screenshot-" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".png", 4);
         }
 
         #endregion ResultPanel
