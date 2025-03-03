@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: test_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: cae5761b76add164da0b5045e90cb760, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 799257186304
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3795185618944
+    m_Localized: Clear Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4110110740480
+    m_Localized: Quit Game ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4335147732992
+    m_Localized: Clear Game ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19337351057408
+    m_Localized: Your answers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19427432124416
+    m_Localized: Correct answers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23399568035840
+    m_Localized: Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24174864158720
+    m_Localized: validate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301234941583360
+    m_Localized: Physical activity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301401354788864
+    m_Localized: Be physically active
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301539670351872
+    m_Localized: Alcohol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301649745666048
+    m_Localized: Limit alcohol consumption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301790431010816
+    m_Localized: Healthy diet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301885750763520
+    m_Localized: Eat a healthy diet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301998380408832
+    m_Localized: Breast-feed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302058564476928
+    m_Localized: Breastfeed your children / limit HRT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302232238022656
+    m_Localized: Prevention
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302282649362432
+    m_Localized: Follow health and safety instructions at work
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302381618159616
+    m_Localized: Screening
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302469232975872
+    m_Localized: Participate in organized screening programs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302549625200640
+    m_Localized: Tobacco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302667271233536
+    m_Localized: Don't smoke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302805339332608
+    m_Localized: Gas exposure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302862327341056
+    m_Localized: Reduce your exposure to radon gas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303059237330944
+    m_Localized: Weight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303117043228672
+    m_Localized: Maintain a healthy weight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303219837231104
+    m_Localized: Sun exposure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303328989798400
+    m_Localized: Avoid excessive exposure to the sun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303404139143168
+    m_Localized: Passive smoking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303500230647808
+    m_Localized: Avoid passive smoking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303578055958528
+    m_Localized: Vaccination
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303641415114752
+    m_Localized: Involve your children in vaccination programs
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

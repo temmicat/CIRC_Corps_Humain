@@ -10,6 +10,8 @@ namespace CorpsHumain.Core
         // This is the base Scriptable Object Containing each var for each organ
         public GameData.levels thisOrgane;
         public List<CardType> thisOrganAnswers;
+        public string ENGname;
+        public string FRname;
 
         public int numberOfAnswers;
 

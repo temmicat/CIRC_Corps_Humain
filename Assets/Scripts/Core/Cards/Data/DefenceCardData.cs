@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Localization;
+
 
 namespace CorpsHumain.Core
 {
@@ -17,8 +19,10 @@ namespace CorpsHumain.Core
         private string description;
         [SerializeField]
         private Sprite icon;
-        
-        
+
+        public LocalizedString title_Key_Text;
+        public LocalizedString description_Key_Text;
+
 
         public CardType thisCard;
 

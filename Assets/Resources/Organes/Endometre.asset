@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Endometre
   m_EditorClassIdentifier: 
   thisOrgane: 10
-  thisOrganAnswers: 0900000009000000
+  thisOrganAnswers: 0900000008000000
+  ENGname: Endometrium
+  FRname: "Endom\xE8tre"
   numberOfAnswers: 2
   icon: {fileID: 21300000, guid: b069ae606a89b154d9401ff4842435c3, type: 3}

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: test_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: cae5761b76add164da0b5045e90cb760, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 799257186304
+    m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3795185618944
+    m_Localized: Relancer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4110110740480
+    m_Localized: Quitter ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4335147732992
+    m_Localized: Recommencer ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19337351057408
+    m_Localized: "Vos r\xE9ponses"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19427432124416
+    m_Localized: "Bonnes r\xE9ponses"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23399568035840
+    m_Localized: Valider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24174864158720
+    m_Localized: valider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301234941583360
+    m_Localized: "Activit\xE9 physique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301401354788864
+    m_Localized: Soyez actif physiquement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301539670351872
+    m_Localized: Alcool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301649745666048
+    m_Localized: Limitez la consommation d'alcool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301790431010816
+    m_Localized: Alimentation saine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301885750763520
+    m_Localized: Adoptez une alimentation saine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301998380408832
+    m_Localized: Allaiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302058564476928
+    m_Localized: Allaitez vos enfants / limitez les THS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302232238022656
+    m_Localized: "Pr\xE9vention"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302282649362432
+    m_Localized: "Suivez les consignes de sant\xE9 et s\xE9curit\xE9 au travail"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302381618159616
+    m_Localized: "D\xE9pistage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302469232975872
+    m_Localized: "Participez aux programmes de d\xE9pistage organis\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302549625200640
+    m_Localized: Tabac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302667271233536
+    m_Localized: Ne fumez pas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302805339332608
+    m_Localized: Exposition Gaz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302862327341056
+    m_Localized: "R\xE9duisez votre exposition au gaz radon"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303059237330944
+    m_Localized: Poids
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303117043228672
+    m_Localized: Gardez un poids de forme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303219837231104
+    m_Localized: Exposition soleil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303328989798400
+    m_Localized: Evitez une exposition excessive au soleil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303404139143168
+    m_Localized: Tabagisme passif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303500230647808
+    m_Localized: Evitez le tabagisme passif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303578055958528
+    m_Localized: Vaccination
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303641415114752
+    m_Localized: Faites participez vos enfants aux programmes de vaccination
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
 
 namespace CorpsHumain.Core
 {
@@ -45,7 +46,14 @@ namespace CorpsHumain.Core
         public void ApplyData()
         {
             icon.sprite = organeDataScriptable.Icon;
-            OrganName.text = organeDataScriptable.name;
+            if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
+            {
+                OrganName.text = organeDataScriptable.ENGname;
+            }
+            else
+            {
+                OrganName.text = organeDataScriptable.FRname;
+            }
         }
     }
 }

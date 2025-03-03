@@ -1,6 +1,7 @@
 
 using log4net.Util;
 using PlasticPipe.PlasticProtocol.Messages;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -30,13 +31,18 @@ namespace CorpsHumain.Core
 
         public DefenceCard thisDefenceCard;
 
+        public event Action<DefenceCardData> dataSet;
+
+        public LocalizationCardsUI localizationCardsTitle;
+        public LocalizationCardsUI localizationCardsDescription;
+
         public void Start()
         {
             if (thisDefenceCardData != null) 
             {
                 thisDefenceCard = new DefenceCard(thisDefenceCardData);
                 thisDefenceCard.Data = thisDefenceCardData;
-                SetData(thisDefenceCard);     
+                SetData(thisDefenceCard);
             }
         }
 
@@ -47,6 +53,9 @@ namespace CorpsHumain.Core
             icon.sprite = card.Data.Icon;
 
             thisDefenceCard = card;
+
+            localizationCardsTitle.SyncLocalization(thisDefenceCard.Data);
+            localizationCardsDescription.SyncLocalization(thisDefenceCard.Data);
         }
 
         private Vector3 lastPosition;
