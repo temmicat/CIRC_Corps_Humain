@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Vessie
   m_EditorClassIdentifier: 
   thisOrgane: 9
-  thisOrganAnswers: 0500000006000000
+  thisOrganAnswers: 06000000
+  thisOrganOtherAnswers: 05000000
   ENGname: Bladder
   FRname: Vessie
-  numberOfAnswers: 2
+  numberOfAnswers: 1
   icon: {fileID: 21300000, guid: f60f574bd0449ee428207b5ecb0adc34, type: 3}

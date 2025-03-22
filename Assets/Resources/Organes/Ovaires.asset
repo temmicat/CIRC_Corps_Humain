@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Ovaires
   m_EditorClassIdentifier: 
   thisOrgane: 12
-  thisOrganAnswers: 0a000000050000000600000008000000
+  thisOrganAnswers: 0600000008000000
+  thisOrganOtherAnswers: 0a00000005000000
   ENGname: Ovaries
   FRname: Ovaires
-  numberOfAnswers: 4
+  numberOfAnswers: 2
   icon: {fileID: 21300000, guid: a6c3c7de53c5af041a786dccd8122bc5, type: 3}

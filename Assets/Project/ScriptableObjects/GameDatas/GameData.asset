@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532b63923e128ab4e96a818782a53a16, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  levelActive: 2
+  levelActive: 12
   levelsCleared: 
   playerAnswers: 
-  answersNumber: 4
+  answersNumber: 2
   gameReloaded: 0
   resultsShowOrder: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000c0000000b000000

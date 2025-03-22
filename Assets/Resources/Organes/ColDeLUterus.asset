@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: ColDeLUterus
   m_EditorClassIdentifier: 
   thisOrgane: 11
-  thisOrganAnswers: 0400000008000000
+  thisOrganAnswers: 08000000
+  thisOrganOtherAnswers: 04000000
   ENGname: Cervix
   FRname: Col de l'uterus
-  numberOfAnswers: 2
+  numberOfAnswers: 1
   icon: {fileID: 21300000, guid: 9f3f7889eab7c9a4989b34a13697f871, type: 3}

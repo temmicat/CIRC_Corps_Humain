@@ -37,7 +37,6 @@ namespace CorpsHumain.Core
             {levels.Ovaires, new List<DefenceCard>() },
             {levels.Sein, new List<DefenceCard>() },
             {levels.Pancreas, new List<DefenceCard>() },
-            {levels.Peau, new List<DefenceCard>() },
             {levels.ColDeLUterus, new List<DefenceCard>() },
             {levels.ColonRectum, new List<DefenceCard>() },
             {levels.Endometre, new List<DefenceCard>() },

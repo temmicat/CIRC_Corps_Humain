@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Oesophage
   m_EditorClassIdentifier: 
   thisOrgane: 1
-  thisOrganAnswers: 0b0000000600000008000000
+  thisOrganAnswers: 0600000008000000
+  thisOrganOtherAnswers: 0b000000
   ENGname: Esophagus
   FRname: Oesophage
-  numberOfAnswers: 3
+  numberOfAnswers: 2
   icon: {fileID: 21300000, guid: 390d2da4b6b891740a1183732f3fca99, type: 3}

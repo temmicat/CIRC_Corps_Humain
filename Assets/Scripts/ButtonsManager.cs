@@ -47,7 +47,6 @@ namespace CorpsHumain.Core
         [Header("Scripts")]
         public WinSystem winSystem;
         public SetLevelsCleared setLevelsCleared;
-        public ShowPlayerResults showPlayerResults;
 
 
 
@@ -83,24 +82,23 @@ namespace CorpsHumain.Core
 
                 if(LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
                 {
-                    organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organs";
+                    organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 12 organs";
                 }
                 else
                 {
-                    organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organes";
+                    organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 12 organes";
                 }
             }
             if (scene.name == "SceneOrgan")
             {
                 text_DragText.SetActive(true);
             }
-                if (gameDataScriptable.levelsCleared.Count == 13)
+                if (gameDataScriptable.levelsCleared.Count == 12)
             {
                 ResultPanel.SetActive(true);
-                showPlayerResults.EnterResults();
                 selectionPanel.SetActive(false);
             }
-            for (int i = 0; i < 13; i++) { Debug.Log("player total answers index " + i + " : " + gameDataScriptable.playerTotalAnswers[gameDataScriptable.resultsShowOrder[i]].Count); }
+            // for (int i = 0; i < 12; i++) { Debug.Log("player total answers index " + i + " : " + gameDataScriptable.playerTotalAnswers[gameDataScriptable.resultsShowOrder[i]].Count); }
             // Your code to execute after the scene is loaded
         }
 
@@ -128,7 +126,7 @@ namespace CorpsHumain.Core
 
             clearConfirmButton.SetActive(false);
 
-            organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organes";
+            organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 12 organes";
         }
 
         public void DeselectButton()
