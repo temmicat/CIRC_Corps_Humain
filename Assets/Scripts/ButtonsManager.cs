@@ -7,6 +7,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using System;
 using System.Collections;
+using static CorpsHumain.Core.GameData;
 
 namespace CorpsHumain.Core
 {
@@ -16,6 +17,7 @@ namespace CorpsHumain.Core
         public GameObject clearConfirmButton;
         public GameObject quitConfirmButton;
         public GameObject levelConfirmButton;
+        public GameObject levelPeauConfirmButton;
         public GameObject validateResultsButton;
         public GameObject backButton;
 
@@ -30,12 +32,17 @@ namespace CorpsHumain.Core
         public Slider audioSlider;
 
         public TextMeshProUGUI organsClearedText;
+        public GameObject text_DragText;
+
+        private int answersNumber = 0;
+        public RectTransform content;
 
 
         [Header("Panels")]
         public GameObject settingsPanel;
         public GameObject selectionPanel;
         public GameObject ResultPanel;
+        public GameObject CreditsPanel;
 
         [Header("Scripts")]
         public WinSystem winSystem;
@@ -47,19 +54,54 @@ namespace CorpsHumain.Core
         // Need to access the Scriptable object GameData
         [SerializeField] GameData gameDataScriptable;
 
-        private void Start()
+        void Start()
         {
-            if (SceneManager.GetActiveScene().name == "MainMenu")
+            if (!gameDataScriptable.gameReloaded)
+            {
+                gameDataScriptable.gameReloaded = true;
+                ClearConfirmButton();
+            }
+        }
+
+        void OnEnable()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        // Unsubscribe from the sceneLoaded event
+        void OnDisable()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        // This will be called after a new scene is loaded
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.name == "MainMenu")
             {
                 setLevelsCleared.CheckValues();
+
+                if(LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
+                {
+                    organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organs";
+                }
+                else
+                {
+                    organsClearedText.text = gameDataScriptable.levelsCleared.Count.ToString() + " / 13 organes";
+                }
             }
-            if (gameDataScriptable.levelsCleared.Count == 13)
+            if (scene.name == "SceneOrgan")
+            {
+                text_DragText.SetActive(true);
+            }
+                if (gameDataScriptable.levelsCleared.Count == 13)
             {
                 ResultPanel.SetActive(true);
                 showPlayerResults.EnterResults();
                 selectionPanel.SetActive(false);
             }
             for (int i = 0; i < 13; i++) { Debug.Log("player total answers index " + i + " : " + gameDataScriptable.playerTotalAnswers[gameDataScriptable.resultsShowOrder[i]].Count); }
+            // Your code to execute after the scene is loaded
         }
 
         #region SelectionPanel
@@ -97,11 +139,13 @@ namespace CorpsHumain.Core
             clearConfirmButton.SetActive(false);
             quitConfirmButton.SetActive(false);
             levelConfirmButton.SetActive(false);
+            levelPeauConfirmButton.SetActive(false);
         }
 
         public void UpperButton()
         {
             AudioSource_Click.Play();
+            DeselectButton();
 
             UpperOrgans.SetActive(true);
         }
@@ -109,6 +153,7 @@ namespace CorpsHumain.Core
         public void MiddleButton()
         {
             AudioSource_Click.Play();
+            DeselectButton();
 
             MiddleOrgans.SetActive(true);
         }
@@ -116,6 +161,7 @@ namespace CorpsHumain.Core
         public void LowerButton()
         {
             AudioSource_Click.Play();
+            DeselectButton();
 
             LowerOrgans.SetActive(true);
         }
@@ -148,12 +194,19 @@ namespace CorpsHumain.Core
 
             // Quit game
             quitConfirmButton.SetActive(false);
+            gameDataScriptable.gameReloaded = false;
+
             Application.Quit();
         }
 
         public void ChooseLevel(string levelStr)
         {
             AudioSource_Click.Play();
+
+            if(levelStr == "Peau")
+            {
+                DeselectButton();
+            }
 
             if (System.Enum.TryParse(levelStr, out GameData.levels level))
             {
@@ -167,7 +220,15 @@ namespace CorpsHumain.Core
             if (!gameDataScriptable.levelsCleared.Contains(level))
             {
                 gameDataScriptable.levelActive = level;
-                levelConfirmButton.SetActive(true);
+                if (level == GameData.levels.Peau)
+                {
+                    levelPeauConfirmButton.SetActive(true);
+                }
+                else
+                {
+                    levelConfirmButton.SetActive(true);
+                }
+
                 Debug.Log(level);
                 Debug.Log(gameDataScriptable.levelActive);
             }
@@ -266,6 +327,24 @@ namespace CorpsHumain.Core
             // Set UnActive settingsPanel
             settingsPanel.SetActive(false);
         }
+
+        public void CreditsButton()
+        {
+            AudioSource_ClickImportant.Play();
+
+            CreditsPanel.SetActive(true);
+
+            settingsPanel.SetActive(false);
+        }
+
+        public void BackToSettingsButton()
+        {
+            AudioSource_ClickImportant.Play();
+
+            CreditsPanel.SetActive(false);
+
+            settingsPanel.SetActive(true);
+        }
         #endregion SettingsPanel
 
         #region GamePanel
@@ -274,13 +353,29 @@ namespace CorpsHumain.Core
         {
             if(SceneManager.GetActiveScene().name == "SceneOrgan")
             {
-                if(gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber && !backButton.activeSelf)
+                if(gameDataScriptable.playerAnswers.Count < answersNumber)
+                {
+                    answersNumber = gameDataScriptable.playerAnswers.Count;
+                    content.sizeDelta = new Vector2(content.sizeDelta.x + 135, content.sizeDelta.y);
+                }
+                else if (gameDataScriptable.playerAnswers.Count > answersNumber)
+                {
+                    answersNumber = gameDataScriptable.playerAnswers.Count;
+                    content.sizeDelta = new Vector2(content.sizeDelta.x - 135, content.sizeDelta.y);
+                }
+
+                if (gameDataScriptable.playerAnswers.Count == gameDataScriptable.answersNumber && !backButton.activeSelf)
                 {
                     validateResultsButton.SetActive(true);
                 }
                 else
                 {
                     validateResultsButton.SetActive(false);
+                }
+
+                if (gameDataScriptable.playerAnswers.Count >= 1)
+                {
+                    text_DragText.SetActive(false);
                 }
             }    
         }

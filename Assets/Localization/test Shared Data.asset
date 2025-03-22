@@ -143,6 +143,10 @@ MonoBehaviour:
     m_Key: Faites participez vos enfants aux programmes de vaccination
     m_Metadata:
       m_Items: []
+  - m_Id: 4626133944422400
+    m_Key: Drag
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1,6 +1,3 @@
-
-using log4net.Util;
-using PlasticPipe.PlasticProtocol.Messages;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -25,6 +22,8 @@ namespace CorpsHumain.Core
 
         public GameData gameDataScriptable;
 
+        public GameObject cardEmplacmentPrefab;
+
 
         [SerializeField]
         public DefenceCardData thisDefenceCardData;
@@ -36,6 +35,8 @@ namespace CorpsHumain.Core
         public LocalizationCardsUI localizationCardsTitle;
         public LocalizationCardsUI localizationCardsDescription;
 
+        public GameObject organ;
+
         public void Start()
         {
             if (thisDefenceCardData != null) 
@@ -44,6 +45,7 @@ namespace CorpsHumain.Core
                 thisDefenceCard.Data = thisDefenceCardData;
                 SetData(thisDefenceCard);
             }
+            organ = this.gameObject.transform.parent.gameObject.transform.parent.gameObject;
         }
 
         public void SetData(DefenceCard card)
@@ -84,9 +86,18 @@ namespace CorpsHumain.Core
                 {
                     if (result.gameObject.TryGetComponent(out OrganeUI organeUI) && gameDataScriptable.playerAnswers.Count < gameDataScriptable.answersNumber)
                     {
+                        organ = result.gameObject;
 
                         //TODO deposer carte
                         Player.Instance.DropCardOnOrgan(thisDefenceCard);
+                        for(int i = 0; i < organ.transform.GetChild(0).gameObject.transform.childCount; i++)
+                        {
+                            if (organ.transform.GetChild(0).gameObject.transform.GetChild(i).gameObject.CompareTag("Emplacment"))
+                            {
+                                Destroy(organ.transform.GetChild(0).gameObject.transform.GetChild(i).gameObject);
+                                break;
+                            }
+                        }
 
                         //ADD card to GameData
                         gameDataScriptable.playerAnswers.Add(thisDefenceCard.Data.thisCard);
@@ -124,6 +135,8 @@ namespace CorpsHumain.Core
                         //TODO deposer carte
                         Player.Instance.RemoveCardOfOrgan(thisDefenceCard);
                         Destroy(this.gameObject);
+
+                        Instantiate(cardEmplacmentPrefab, organ.transform.GetChild(0).gameObject.transform);
 
                         //REMOVE card from WinSystem
                         gameDataScriptable.playerAnswers.Remove(thisDefenceCard.Data.thisCard);

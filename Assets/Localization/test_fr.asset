@@ -146,6 +146,10 @@ MonoBehaviour:
     m_Localized: Faites participez vos enfants aux programmes de vaccination
     m_Metadata:
       m_Items: []
+  - m_Id: 4626133944422400
+    m_Localized: Glisser les cartes sur l'organe
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

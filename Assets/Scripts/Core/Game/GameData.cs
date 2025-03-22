@@ -25,6 +25,8 @@ namespace CorpsHumain.Core
 
         public int answersNumber;
 
+        public bool gameReloaded = false;
+
         public List<DefenceCard> answers = new List<DefenceCard>();
 
 

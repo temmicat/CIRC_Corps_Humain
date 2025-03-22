@@ -538,6 +538,7 @@ MonoBehaviour:
   description: {fileID: 8233070687989271076}
   icon: {fileID: 2790074675998507401}
   gameDataScriptable: {fileID: 11400000, guid: 90fa4910671ddd64999cf7c13e23ddb2, type: 2}
+  cardEmplacmentPrefab: {fileID: 7676971629985243368, guid: fb272548f78847f4d8e5e54b80f79338, type: 3}
   thisDefenceCardData: {fileID: 0}
   localizationCardsTitle: {fileID: 379718778668456179}
   localizationCardsDescription: {fileID: 5981354892837872382}
